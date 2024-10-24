@@ -22,7 +22,7 @@ export default {
   },
   mounted() {
     // Устанавливаем соединение с WebSocket при загрузке компонента
-    this.socket = new WebSocket("ws://localhost/chat/ws");
+    this.socket = new WebSocket("ws://185.253.218.8/chat/ws");
 
     this.socket.onopen = () => {
       console.log("[open] Connection established");
@@ -61,7 +61,7 @@ export default {
       }
 
       try {
-        const response = await fetch('http://localhost/api/send-message', {
+        const response = await fetch('http://185.253.218.8/api/send-message', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

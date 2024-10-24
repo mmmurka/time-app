@@ -17,7 +17,7 @@ export default {
   },
   mounted() {
     // Устанавливаем соединение с WebSocket при загрузке компонента
-    this.socket = new WebSocket("ws://localhost/chat/ws");
+    this.socket = new WebSocket("ws://185.253.218.8/chat/ws");
 
     this.socket.onopen = () => {
       console.log("[open] Connection established");
@@ -60,7 +60,7 @@ export default {
   },
   created: async function () {
     this.startInterval();
-    const res = await fetch('http://localhost:5555/times');
+    const res = await fetch('http://185.253.218.8:5555/times');
     const json = await res.json();
     if (json.length) this.savedTimes = json;
   },
