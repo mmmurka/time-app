@@ -17,7 +17,7 @@ export default {
   },
   mounted() {
     // Устанавливаем соединение с WebSocket при загрузке компонента
-    this.socket = new WebSocket("ws://localhost:8000/api/ws");
+    this.socket = new WebSocket("ws://localhost/chat/ws");
 
     this.socket.onopen = () => {
       console.log("[open] Connection established");
