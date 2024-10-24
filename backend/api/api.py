@@ -20,7 +20,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 fake_users_db = {
     "user1": {
         "username": "user1",
-        "hashed_password": pwd_context.hash("password1"),  # Пример хешированного пароля
+        "hashed_password": pwd_context.hash("31415926"),  # Пример хешированного пароля
     }
 }
 
