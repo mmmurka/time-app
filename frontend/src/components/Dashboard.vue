@@ -61,7 +61,7 @@ export default {
       }
 
       try {
-        const response = await fetch('http://localhost:8000/api/send-message/', {
+        const response = await fetch('http://localhost/api/send-message', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

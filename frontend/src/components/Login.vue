@@ -24,7 +24,7 @@ export default {
   methods: {
     async loginUser() {
       try {
-        const response = await axios.post('http://localhost:8000/api/login', {
+        const response = await axios.post('http://localhost/api/login', {
           username: this.username,
           password: this.password,
         });

@@ -11,7 +11,6 @@ from datetime import timedelta
 
 
 router = APIRouter(
-    prefix="/api",
 )
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -95,3 +94,8 @@ async def send_message(message: Message):
     print(f"Message tochno sent: {text_message}")  # Логируем отправленное сообщение
 
     return {'message': "Message sent"}
+
+
+@router.get("/test")
+async def test():
+    return {'message': "Test"}
