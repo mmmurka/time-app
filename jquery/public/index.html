@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Часы и Чат</title>
+    <title>Time app</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="greetings">
-        <h1 id="currentTime" class="green"></h1> <!-- Часы -->
-        <button id="fullScreenButton">На весь экран</button>
-        <ul id="messagesList"></ul> <!-- Список сообщений -->
-    </div>
+
+
+        <h1 class="green" id="currentTime"></h1>
+        <button id="fullScreenButton"></button> <!-- Кнопка с пустым текстом -->
+        <div id="messagesListContainer">
+            <ul id="messagesList"></ul>
+        </div>
+
+
+
     <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
+

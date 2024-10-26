@@ -1,49 +1,65 @@
 body {
-    background-color: #1b1a1a; /* Чорний фон для всього тіла */
-    color: #fff; /* Білий текст за замовчуванням */
+    background-color: #1b1a1a; /* Чёрный фон */
+    color: #fff; /* Белый текст по умолчанию */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 h1 {
     font-weight: 500;
-    font-size: 20rem;
-    color: #0b910b; /* Зелений колір для годин */
-    margin: 0; /* Прибираємо верхній та нижній відступ */
-}
-
-.greetings {
+    font-size: 30rem;
+    color: #0b910b; /* Зелёный цвет для часов */
     text-align: center;
-    margin-bottom: 50px; /* Відступ між заголовком і списком повідомлень */
+    margin: 0;
+    position: relative;
+    top: -3vh; /* Поднимаем ближе к началу экрана */
 }
-
-#messagesList {
-    list-style: none; /* Прибираємо маркери списку */
-    padding: 0; /* Прибираємо відступи */
-}
-
 
 #fullScreenButton {
-    background-color: #0b910b; /* Цвет кнопки */
-    color: #fff; /* Цвет текста кнопки */
-    font-size: 2rem; /* Размер текста кнопки */
-    border: none; /* Убираем границы */
-    border-radius: 5px; /* Скругленные углы */
-    padding: 20px; /* Отступы внутри кнопки */
-    cursor: pointer; /* Указываем, что кнопка кликабельна */
-    width: 100vw; /* Ширина кнопки на весь экран */
-    height: 100vh; /* Высота кнопки на весь экран */
+    background-color: #0b910b; /* Зелёный цвет кнопки */
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    font-size: 1rem;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+#messagesListContainer {
+    overflow: hidden; /* Прячем выходящий за границы текст */
+    width: 100vw; /* Ширина контейнера по ширине экрана */
+    text-align: center;
+}
 
 #messagesList li {
-    background-color: #333; /* Темний фон для повідомлень */
+    display: inline-block; /* Отображение в один ряд */
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-    margin-bottom: 10px;
+    font-size: 9rem;
+    white-space: nowrap; /* Отключаем перенос текста */
+    margin: 0 auto;
+    animation: scrollText linear infinite;
+    border: 1px solid #ccc;
     border-radius: 3px;
-    border: 1px solid #ccc; /* Світло-сіра рамка */
-    color: #fff; /* Білий колір тексту повідомлень */
-    font-size: 8rem;
-    max-width: 1200px; /* Максимальна ширина для рамки */
-    word-wrap: break-word; /* Перенос слів для довгих повідомлень */
-    margin-left: auto;
-    margin-right: auto;
+}
+
+/* Анимация прокрутки */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Начинаем за границей справа */
+    }
+    100% {
+        transform: translateX(-100%); /* Завершаем за границей слева */
+    }
+}
+
+/* Управление скоростью анимации */
+#messagesList li.scroll {
+    animation-duration: 25s; /* Скорость прокрутки (измените по необходимости) */
 }
