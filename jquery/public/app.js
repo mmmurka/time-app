@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    let currentTime = moment().format('HH:mm:ss');
+    let currentTime = moment().format('HH:mm');
     $('#currentTime').text(currentTime);
 
     // Обновление времени каждую секунду
     setInterval(function() {
-        currentTime = moment().format('HH:mm:ss');
+        currentTime = moment().format('HH:mm');
         $('#currentTime').text(currentTime);
     }, 1000);
 
