@@ -20,6 +20,20 @@ h1 {
     padding: 0; /* Прибираємо відступи */
 }
 
+
+#fullScreenButton {
+    background-color: #0b910b; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    font-size: 2rem; /* Размер текста кнопки */
+    border: none; /* Убираем границы */
+    border-radius: 5px; /* Скругленные углы */
+    padding: 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Указываем, что кнопка кликабельна */
+    width: 100vw; /* Ширина кнопки на весь экран */
+    height: 100vh; /* Высота кнопки на весь экран */
+}
+
+
 #messagesList li {
     background-color: #333; /* Темний фон для повідомлень */
     padding: 10px;

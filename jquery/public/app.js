@@ -56,4 +56,13 @@ $(document).ready(function() {
             });
         }
     });
+
+    // Обработчик для кнопки на весь экран
+    $('#fullScreenButton').click(function() {
+        if (document.fullscreenElement) {
+            document.exitFullscreen();
+        } else {
+            document.documentElement.requestFullscreen();
+        }
+    });
 });
