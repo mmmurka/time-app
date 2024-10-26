@@ -1,24 +1,35 @@
+body {
+    background-color: #1b1a1a; /* Чорний фон для всього тіла */
+    color: #fff; /* Білий текст за замовчуванням */
+}
+
 h1 {
     font-weight: 500;
     font-size: 20rem;
-    top: -90px;
+    color: #0b910b; /* Зелений колір для годин */
+    margin: 0; /* Прибираємо верхній та нижній відступ */
 }
 
 .greetings {
     text-align: center;
+    margin-bottom: 50px; /* Відступ між заголовком і списком повідомлень */
+}
+
+#messagesList {
+    list-style: none; /* Прибираємо маркери списку */
+    padding: 0; /* Прибираємо відступи */
 }
 
 #messagesList li {
-    background-color: #333;
+    background-color: #333; /* Темний фон для повідомлень */
     padding: 10px;
     margin-bottom: 10px;
-    top: -150px;
     border-radius: 3px;
-    border: 1px solid #ccc;
-    color: #fff;
+    border: 1px solid #ccc; /* Світло-сіра рамка */
+    color: #fff; /* Білий колір тексту повідомлень */
     font-size: 8rem;
-    max-width: 1200px;
-    word-wrap: break-word;
+    max-width: 1200px; /* Максимальна ширина для рамки */
+    word-wrap: break-word; /* Перенос слів для довгих повідомлень */
     margin-left: auto;
     margin-right: auto;
 }
