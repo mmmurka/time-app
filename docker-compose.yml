@@ -11,6 +11,7 @@ services:
     depends_on:
       - backend
       - frontend
+      - jquery-app
     networks:
       - dev
 
@@ -29,6 +30,15 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    networks:
+      - dev
+
+  jquery-app:
+    build:
+      context: ./jquery
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"  # Прокси на порт 4000
     networks:
       - dev
 

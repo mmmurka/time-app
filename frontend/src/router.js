@@ -6,7 +6,7 @@ import Dashboard from './components/Dashboard.vue';
 
 // Определяем маршруты
 const routes = [
-  { path: '/', component: Time },
+  { path: '/time', name: 'Time', component: Time },
   { path: '/login', name: 'Login', component: Login }, // Добавил имя маршрута 'Login'
   {
     path: '/dashboard',
