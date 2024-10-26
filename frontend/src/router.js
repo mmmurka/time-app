@@ -6,10 +6,10 @@ import Dashboard from './components/Dashboard.vue';
 
 // Определяем маршруты
 const routes = [
-  { path: '/front/time', name: 'Time', component: Time },
-  { path: '/front/time', name: 'Login', component: Login }, // Добавил имя маршрута 'Login'
+  { path: '/', name: 'Time', component: Time },
+  { path: '/login', name: 'Login', component: Login }, // Добавил имя маршрута 'Login'
   {
-    path: '/front/dashboard',
+    path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard,  // Защищаем роут
     meta: { requiresAuth: true },
